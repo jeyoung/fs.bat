@@ -5,11 +5,11 @@ GOTO Exit
 
 :Explicit
 IF "%2%"=="" GOTO ImplicitDir
-FINDSTR /R /S /N %1 %2
+FINDSTR /P /I /R /S /N %1 %2
 GOTO Exit
 
 :ImplicitDir
-FINDSTR /R /S /N %1 *.*
+FINDSTR /P /I /R /S /N %1 *.*
 GOTO Exit
 
 :Exit
